@@ -1,7 +1,9 @@
 from flask import Flask, request, abort
 import requests
 
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1361865101803520020/-TrkhKBx8SpbIBUFMGesOKdcgmm_S-BKDKYgkPuIVGr3g9F064VXUEgv6II31rHG3rYE"
+import os
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
+
 
 app = Flask(__name__)
 
